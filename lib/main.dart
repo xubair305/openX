@@ -3,6 +3,7 @@ import 'dart:developer';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 import 'package:get/get.dart';
 import 'package:hive_flutter/hive_flutter.dart';
@@ -35,6 +36,8 @@ Future<void> main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(DataModelAdapter());
   await Hive.openBox<DataModel>('data');
+
+  await dotenv.load();
 
   runZonedGuarded<Future<void>>(
     () async {

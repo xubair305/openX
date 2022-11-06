@@ -17,6 +17,7 @@ dependencies:
   flutter_svg: ^1.1.6
   http: ^0.13.5
   fluentui_icons: ^1.0.0
+  flutter_dotenv: ^5.0.2
   modal_bottom_sheet: ^2.1.2  
   hive: ^2.2.3
   hive_flutter: ^1.1.0
@@ -45,4 +46,5 @@ flutter:
   assets:
     - assets/app_icons/
     - assets/marketing/
+    - .env
 

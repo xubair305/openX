@@ -1,9 +1,10 @@
 //import 'url_key_secret.dart';
 
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class Url {
   //API key
-  static const String apiKey =
-      "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";
+  static String apiKey = dotenv.env['OPENAI_KEY'] ?? "";
 
   //Base URLs
   static const String baseUrl = 'https://api.openai.com/v1';

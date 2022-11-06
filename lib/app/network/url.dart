@@ -3,8 +3,7 @@
 class Url {
   //API key
   static const String apiKey =
-      // "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";
-      "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";
+      "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";
 
   //Base URLs
   static const String baseUrl = 'https://api.openai.com/v1';

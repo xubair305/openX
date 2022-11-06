@@ -19,14 +19,26 @@ class HomeView extends GetView<HomeController> {
         child: Column(
           crossAxisAlignment: crossStart,
           children: [
-            TextField(
-              decoration: const InputDecoration(hintText: "Enter anything"),
-              controller: controller.searchController,
-            ),
-            Center(
-              child: TextButton(
-                onPressed: controller.sendCompilationRequest,
-                child: const Text("Submit"),
+            Container(
+              padding: const EdgeInsets.all(16.0),
+              decoration: BoxDecoration(
+                color: context.theme.primaryColor.withOpacity(0.20),
+                borderRadius: BorderRadius.circular(8.0),
+              ),
+              child: Column(
+                children: [
+                  TextField(
+                    decoration:
+                        const InputDecoration(hintText: "Enter anything"),
+                    controller: controller.searchController,
+                  ),
+                  Center(
+                    child: TextButton(
+                      onPressed: controller.sendCompilationRequest,
+                      child: const Text("Submit"),
+                    ),
+                  ),
+                ],
               ),
             ),
             Obx(

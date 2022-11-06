@@ -60,13 +60,17 @@ class AppText {
       {TextAlign? textAlign,
       Color? color,
       FontWeight? fontWeight,
+      bool isUnderline = false,
       double? getfontSize,
       int? maxLines,
       TextOverflow? overflow}) {
     return Text(
       data,
       style: TextStyle(
-          fontSize: getfontSize ?? 16, color: color, fontWeight: fontWeight),
+          fontSize: getfontSize ?? 16,
+          decoration: isUnderline ? TextDecoration.underline : null,
+          color: color,
+          fontWeight: fontWeight),
       textAlign: textAlign,
       overflow: overflow,
       maxLines: maxLines,

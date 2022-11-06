@@ -19,7 +19,11 @@ class HistoryItemView extends GetView<HistoryItemController> {
           crossAxisAlignment: crossStart,
           children: [
             const Gap(24),
-            AppText.heading4(controller.argument.title ?? ""),
+            AppText.heading4(
+              "Q. ${controller.argument.title ?? ""}",
+              fontWeight: FontWeight.bold,
+            ),
+            const Gap(16),
             AppText.paragraph(
               controller.argument.description ?? "",
               isSelectable: true,
@@ -35,11 +39,11 @@ class HistoryItemView extends GetView<HistoryItemController> {
               child: Row(
                 mainAxisAlignment: mainCenter,
                 children: [
-                  Icon(
+                  const Icon(
                     FluentSystemIcons.ic_fluent_history_filled,
                     size: 24.0,
                   ),
-                  Gap(8),
+                  const Gap(8),
                   AppText.smallParagraph(
                     "Viewing ${controller.argument.date}, ${controller.argument.time}",
                   ),

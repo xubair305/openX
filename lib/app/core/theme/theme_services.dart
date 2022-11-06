@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:openx/app/core/utils/index.dart';
 
 class ThemeService {
-  String themeMode = "system";
+  String themeMode = "light";
 
   final String _themeKey = "themeMode";
 
@@ -21,7 +21,7 @@ class ThemeService {
   }
 
   String get isSavedThemeData {
-    return StorageUtil.read(_themeKey) ?? 'system';
+    return StorageUtil.read(_themeKey) ?? 'light';
   }
 
   saveTheme(String value) {

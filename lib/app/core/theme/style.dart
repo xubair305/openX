@@ -4,7 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'index.dart';
 
 class Style {
-  static const PageTransitionsTheme _pageTransitionsTheme = PageTransitionsTheme(
+  static const PageTransitionsTheme _pageTransitionsTheme =
+      PageTransitionsTheme(
     builders: <TargetPlatform, PageTransitionsBuilder>{
       TargetPlatform.android: ZoomPageTransitionsBuilder(),
       TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
@@ -17,7 +18,7 @@ class Style {
     scaffoldBackgroundColor: ThemeColors.scaffoldBackgroundColor,
     primaryColor: ThemeColors.primaryColor,
     appBarTheme: const AppBarTheme(
-      elevation: 2,
+      elevation: 0.0,
       color: ThemeColors.appBarColor,
       centerTitle: true,
       titleTextStyle: TextStyle(
@@ -39,8 +40,10 @@ class Style {
       unselectedIconTheme: IconThemeData(
         size: 22,
       ),
-      selectedLabelStyle: TextStyle(fontSize: 13.5, overflow: TextOverflow.ellipsis),
-      unselectedLabelStyle: TextStyle(fontSize: 11.5, overflow: TextOverflow.ellipsis),
+      selectedLabelStyle:
+          TextStyle(fontSize: 13.5, overflow: TextOverflow.ellipsis),
+      unselectedLabelStyle:
+          TextStyle(fontSize: 11.5, overflow: TextOverflow.ellipsis),
       type: BottomNavigationBarType.fixed,
     ),
     colorScheme: ColorScheme.fromSwatch(
@@ -84,8 +87,10 @@ class Style {
       showUnselectedLabels: true,
       selectedItemColor: ThemeColors.selectedItemColor,
       unselectedItemColor: ThemeColors.unselectedItemColor,
-      selectedLabelStyle: TextStyle(fontSize: 13, overflow: TextOverflow.ellipsis),
-      unselectedLabelStyle: TextStyle(fontSize: 11, overflow: TextOverflow.ellipsis),
+      selectedLabelStyle:
+          TextStyle(fontSize: 13, overflow: TextOverflow.ellipsis),
+      unselectedLabelStyle:
+          TextStyle(fontSize: 11, overflow: TextOverflow.ellipsis),
     ),
     colorScheme: ColorScheme.fromSwatch(
       brightness: Brightness.dark,
@@ -128,8 +133,10 @@ class Style {
       showUnselectedLabels: true,
       selectedItemColor: ThemeColors.selectedItemColor,
       unselectedItemColor: ThemeColors.unselectedItemColor,
-      selectedLabelStyle: TextStyle(fontSize: 13, overflow: TextOverflow.ellipsis),
-      unselectedLabelStyle: TextStyle(fontSize: 11, overflow: TextOverflow.ellipsis),
+      selectedLabelStyle:
+          TextStyle(fontSize: 13, overflow: TextOverflow.ellipsis),
+      unselectedLabelStyle:
+          TextStyle(fontSize: 11, overflow: TextOverflow.ellipsis),
     ),
     colorScheme: ColorScheme.fromSwatch(
       brightness: Brightness.dark,

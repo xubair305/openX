@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:intl/intl.dart';
 import 'package:openx/app/core/base/index.dart';
 import 'package:openx/app/core/hive_services/index.dart';
 import 'package:openx/app/modules/home/model/choice_model.dart';
@@ -27,6 +28,20 @@ class HomeController extends BaseController {
     debugPrint("$runtimeType onClose called");
   }
 
+  String get formattedDate {
+    final DateTime now = DateTime.now();
+    final DateFormat formatter = DateFormat('EEEE, MMM dd, yyyy');
+    final String formatted = formatter.format(now);
+    return formatted;
+  }
+
+  String get formattedTime {
+    final DateTime now = DateTime.now();
+    final DateFormat formatter = DateFormat('jm');
+    final String formatted = formatter.format(now);
+    return formatted;
+  }
+
   sendCompilationRequest() async {
     isLoading.value = true;
     Map<String, dynamic> user = {
@@ -51,6 +66,8 @@ class HomeController extends BaseController {
     DataModel data = DataModel(
       title: searchController.text.trim(),
       description: choices[0].text,
+      entryDate: formattedDate,
+      entryTime: formattedTime,
     );
     await dataBox.add(data);
     isLoading.value = false;

@@ -16,7 +16,7 @@ class DashboardView extends GetView<DashboardController> {
             highlightColor: Colors.transparent,
           ),
           child: BottomNavigationBar(
-            backgroundColor: whiteColor,
+            backgroundColor: context.theme.backgroundColor,
             showSelectedLabels: false,
             showUnselectedLabels: false,
             elevation: 4,
@@ -28,6 +28,7 @@ class DashboardView extends GetView<DashboardController> {
             onTap: (value) {
               controller.tabsIndex.value = value;
             },
+            unselectedItemColor: context.theme.unselectedWidgetColor,
             items: const [
               BottomNavigationBarItem(
                 icon: Icon(FluentSystemIcons.ic_fluent_home_regular),

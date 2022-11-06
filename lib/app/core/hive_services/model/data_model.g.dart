@@ -19,17 +19,23 @@ class DataModelAdapter extends TypeAdapter<DataModel> {
     return DataModel(
       title: fields[0] as String?,
       description: fields[1] as String?,
+      entryTime: fields[2] as String?,
+      entryDate: fields[3] as String?,
     );
   }
 
   @override
   void write(BinaryWriter writer, DataModel obj) {
     writer
-      ..writeByte(2)
+      ..writeByte(4)
       ..writeByte(0)
       ..write(obj.title)
       ..writeByte(1)
-      ..write(obj.description);
+      ..write(obj.description)
+      ..writeByte(2)
+      ..write(obj.entryTime)
+      ..writeByte(3)
+      ..write(obj.entryDate);
   }
 
   @override
